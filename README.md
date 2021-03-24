@@ -1,3 +1,4 @@
+[![MathUtility | Demo CI process | © 2020 by beo2000](https://github.com/beo2000/MyRepo/actions/workflows/mathutil-ci.yml/badge.svg)](https://github.com/beo2000/MyRepo/actions/workflows/mathutil-ci.yml)
 ## Welcome to Math Utility Repository. This repo offers various math methods used as a helper for your project. 
 
 ### _You will find in this repo the following stuff:_
