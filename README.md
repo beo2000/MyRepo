@@ -8,7 +8,7 @@
 e.g. getFactorial(), sin(), cos()
 * (TBA...)
 
-Connect me via:  
+### Connect me via:  
 
 [My facebook](https://www.facebook.com/beobell.trinh)  
 [My email](phutrong12d@gmail.com)

@@ -22,24 +22,24 @@ public class MathUtility {
     //âm giai thừa không tính được
     //hầm chỉ chấp nhận từ 0 tới 20! -> long
     //0! = 1! = 1
-    public static long getFactorial(int n) {
-        if (0 > n || n > 20) {
-            throw new IllegalArgumentException("Must be in boundaries 0..20");
-        }
-
-        if (n == 0 || n == 1) {
-            return 1;
-        }
-
-        //sống sót cho đến đoạn này, sure n = 2...20
-        long result = 1; //có tình để value này
-
-        for (int i = 2; i <= n; i++) {
-            result *= i;
-        }
-        //n! = 1.2.3.4.5....n
-        return result;
-    }
+//    public static long getFactorial(int n) {
+//        if (0 > n || n > 20) {
+//            throw new IllegalArgumentException("Must be in boundaries 0..20");
+//        }
+//
+//        if (n == 0 || n == 1) {
+//            return 1;   //khỏi mất công tính, return ngay
+//        }
+//
+//        //sống sót cho đến đoạn này, sure n = 2...20
+//        long result = 1; //có tình để value này
+//
+//        for (int i = 2; i <= n; i++) {
+//            result *= i;
+//        }
+//        //n! = 1.2.3.4.5....n
+//        return result;
+//    }
 
     public static void main(String[] args) {
         //tui muốn test 5! có đúng 120 hem???
@@ -63,6 +63,18 @@ public class MathUtility {
 //        System.out.println(getFactorial(7));
 
         System.out.println("5! expected: " + expected + "; actual: " + actual);
+    }
+    
+    public static long getFactorial(int n) {
+        if (0 > n || n > 20) {
+            throw new IllegalArgumentException("Must be in boundaries 0..20");
+        }
+
+        if (n == 0 || n == 1) {
+            return 1;   //khỏi mất công tính, return ngay
+        }
+        
+        return n * getFactorial(n - 1);
     }
 }
 
@@ -100,4 +112,4 @@ public class MathUtility {
 //cách đặt tên phải có lớp lang phân tầng
 //Shift f6 là chạy tại class mày đang ở class có hàm main
 //@Test mặc định là main(annotation)
-//f6 sẽ chạy vào class chứa hàm main
+//f6 sẽ chạy vào class chứa hàm main8
